@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: scene)
-        window?.rootViewController = Builder.getRegView()
+        window?.rootViewController = Builder.getTabView()
         window?.makeKeyAndVisible()
         
     }
@@ -43,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case .reg:
             window?.rootViewController = Builder.getRegView()
         case .app:
-            print("salam ")
+            window?.rootViewController = Builder.getTabView()
         }
     }
 

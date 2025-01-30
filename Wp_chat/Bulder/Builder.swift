@@ -22,5 +22,13 @@ class Builder {
         
         return view
     }
+    static func getTabView() -> UIViewController{
+        let view = TabBarView()
+        let presenter = TabBarPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
 }
 
